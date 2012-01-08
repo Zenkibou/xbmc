@@ -612,7 +612,7 @@ bool CxImagePNG::Encode(CxFile *hFile)
 
 	/* set the palette if there is one */
 #if PNG_LIBPNG_VER > 10399
-	png_colorp _palette;
+	png_colorp _palette = NULL;
 #endif
 	if (GetPalette()){
 #if PNG_LIBPNG_VER <= 10399
